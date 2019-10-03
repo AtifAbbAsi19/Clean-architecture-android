@@ -1,5 +1,7 @@
 package com.droid.clean_architecture_android_tutorial.di.modules
 
+import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -8,28 +10,42 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
-import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 
 @Module
 class NetworkModule {
 
+    val BASE_URL = "https://jsonplaceholder.typicode.com"
+
+
     @Singleton
     @Provides
-    fun getRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun getRequestApi(retroFit: Retrofit): RequestApi {
+        return retroFit.create<RequestApi>(RequestApi::class.java)
+    }
 
-        val gson = GsonBuilder()
-            .setLenient()
-            .create();
-
-        return Retrofit.Builder().baseUrl("")
+    @Singleton
+    @Provides
+    fun getRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit {
+        return Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
             .build()
     }
+
+    @Singleton
+    @Provides
+    fun getGson(): Gson {
+
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+        return gson
+
+    }
+
 
     @Singleton
     @Provides

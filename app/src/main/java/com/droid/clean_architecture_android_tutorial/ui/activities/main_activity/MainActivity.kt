@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.droid.clean_architecture_android_tutorial.R
 import com.droid.clean_architecture_android_tutorial.databinding.ActivityMainBinding
+import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseActivity
+import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+
+    @Inject
+    lateinit var requestApi: RequestApi
 
 
     override fun onCreateViews(savedInstanceState: Bundle?) {
@@ -20,7 +26,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
 
     override fun onCreateViews() {
-//        mViewDataBinding.root
+
+        if (this::requestApi.isInitialized)
+            requestApi.getPosts()
     }
 
 
