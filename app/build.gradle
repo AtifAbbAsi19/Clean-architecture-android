@@ -31,9 +31,12 @@ android {
 dependencies {
 
     def retrofitVersion = "2.5.0"
+    def retrofitInterceptorVersion = "3.7.0"
+    def okhttp3Version = "3.12.0"
     def rxjava_version = '2.2.7'
     def rxandroid_version = '2.1.1'
     def recyclerview_version = "1.0.0"
+    def daggerVersion = "2.15"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -46,6 +49,9 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3Version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$retrofitInterceptorVersion"
+
     // RxJava
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
 
@@ -54,6 +60,7 @@ dependencies {
 
     // RxAndroid
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
 
     // Recyclerview
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
@@ -88,11 +95,10 @@ dependencies {
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
 
 
+    /*   // Timber
+       implementation "com.jakewharton.timber:timber:$project.timberVersion"
 
- /*   // Timber
-    implementation "com.jakewharton.timber:timber:$project.timberVersion"
-
-*/
+   */
     //Navigation Implementation
     implementation "android.arch.navigation:navigation-fragment:$rootProject.navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigationVersion"

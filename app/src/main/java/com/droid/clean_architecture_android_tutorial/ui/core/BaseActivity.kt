@@ -52,7 +52,7 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         onFinish() //on finish method
         super.onDestroy()
     }
-
+//on low memeirt
 
 
     fun startNewActivity(context: Context, clazz: Class<*>, extras: Bundle) {
