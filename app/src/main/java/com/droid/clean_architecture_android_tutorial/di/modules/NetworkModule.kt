@@ -16,7 +16,7 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
-
+    @Singleton
     @Provides
     fun getRetrofit(okHttpClient: OkHttpClient): Retrofit {
 
@@ -31,13 +31,14 @@ class NetworkModule {
             .build()
     }
 
-
+    @Singleton
     @Provides
     fun getOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
     }
 
 
+    @Singleton
     @Provides
     fun getHttpLoggingInterceptor(): HttpLoggingInterceptor {
         var httpLoggingInterceptor = HttpLoggingInterceptor()
