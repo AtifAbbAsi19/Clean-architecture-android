@@ -1,10 +1,11 @@
 package com.droid.clean_architecture_android_tutorial.di.components
 
 import android.app.Application
-import dagger.Module
+import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
+import dagger.Component
 
 
-@Module()
+@Component(modules = arrayOf(NetworkModule::class))
 interface NetworkComponent {
 
     fun inject(application: Application)

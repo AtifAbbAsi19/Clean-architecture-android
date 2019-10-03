@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -10,6 +12,9 @@ android {
 
     dataBinding {
         enabled = true
+    }
+    kapt {
+        generateStubs = true
     }
 
     defaultConfig {
@@ -70,6 +75,11 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.15'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.15'
 
+    kapt 'com.google.dagger:dagger-android-processor:2.15'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    kapt 'com.google.dagger:dagger-compiler:2.15'
 
     // Dagger Android
     implementation 'com.google.dagger:dagger-android:2.15'
