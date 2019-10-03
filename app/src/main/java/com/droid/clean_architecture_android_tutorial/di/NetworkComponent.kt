@@ -7,7 +7,6 @@ import dagger.Module
 public interface NetworkComponent {
 
 
-//   public  fun getCar() as Car
 
 
 
