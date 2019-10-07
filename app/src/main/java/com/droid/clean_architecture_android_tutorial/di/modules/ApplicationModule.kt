@@ -5,16 +5,24 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+/**
+ * @Modules add object to Dependency Graphs over provides method
+ */
+
 @Module
-class ApplicationModule {
+class ApplicationModule(mApplication: Application) {
 
-    lateinit var mApplication: Application
+    var mApplication: Application
 
 
-    fun ApplicationModule(mApplication: Application) {
+    init {
         this.mApplication = mApplication
     }
 
+    /*  fun ApplicationModule() {
+          this.mApplication = mApplication
+      }
+  */
     @Singleton
     @Provides
     fun getApplication(): Application {

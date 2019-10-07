@@ -3,6 +3,8 @@ package com.droid.clean_architecture_android_tutorial.ui.core
 import android.app.Application
 import android.util.Log
 import com.droid.clean_architecture_android_tutorial.di.components.DaggerAppComponent
+import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
+import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
 
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import javax.inject.Inject
@@ -21,6 +23,16 @@ class BaseApplication : Application() {
 
         val appComponent = DaggerAppComponent.create()
         appComponent.inject(this)
+
+
+        val applicationComponent = DaggerAppComponent.builder()
+            .networkModule(NetworkModule())
+            .applicationModule(ApplicationModule(this))
+            .build()
+
+        applicationComponent.inject(this)
+
+
 //        val networkComponent = DaggerNetworkComponent.create()
 //        networkComponent.inject(this)
 
