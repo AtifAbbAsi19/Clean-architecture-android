@@ -8,10 +8,12 @@ import javax.inject.Inject
 
 class BaseApplication : Application() {
 
-
+    /**
+     * Field Injection or Member Injection
+     */
     //    @JvmField
     @Inject
-    lateinit var requestApi: RequestApi
+    public  lateinit var requestApi: RequestApi
 
     override fun onCreate() {
         super.onCreate()

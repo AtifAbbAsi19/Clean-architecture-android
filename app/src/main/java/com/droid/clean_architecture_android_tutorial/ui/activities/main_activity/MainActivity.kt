@@ -6,6 +6,7 @@ import com.droid.clean_architecture_android_tutorial.R
 import com.droid.clean_architecture_android_tutorial.databinding.ActivityMainBinding
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseActivity
+import com.droid.clean_architecture_android_tutorial.ui.core.BaseApplication
 import javax.inject.Inject
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -29,6 +30,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         if (this::requestApi.isInitialized)
             requestApi.getPosts()
+
+
+//        if (BaseApplication()::requestApi.isInitialized && BaseApplication()::requestApi != null) {
+//            requestApi.getPosts()
+//        }
+
+
     }
 
 

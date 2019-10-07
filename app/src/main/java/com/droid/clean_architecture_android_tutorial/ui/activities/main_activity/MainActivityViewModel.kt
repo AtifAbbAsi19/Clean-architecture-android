@@ -7,8 +7,8 @@ import javax.inject.Inject
 
 class MainActivityViewModel(repository: RequestApi) : ViewModel() {
 
-    @Inject
-    var requestApi: RequestApi = repository
+//    @Inject
+   public var requestApi: RequestApi = repository
 
 
 }
