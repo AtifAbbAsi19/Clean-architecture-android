@@ -2,7 +2,15 @@ package com.droid.clean_architecture_android_tutorial.utils
 
 class DataSource {
     /**
+     *
+     * https://www.coderefer.com/rxandroid-example-tutorial/
+     *
+     *
      * https://www.journaldev.com/20405/android-dagger-2-retrofit-recyclerview
+     *
+     * https://www.vogella.com/tutorials/Dagger/article.html
+     *
+     * https://android.jlelse.eu/android-mvvm-with-dagger-2-retrofit-rxjava-architecture-components-6f5da1a75135
      *
      * https://medium.com/knowing-android/headers-interceptors-and-authenticators-with-retrofit-1a00fed0d5eb
      *
