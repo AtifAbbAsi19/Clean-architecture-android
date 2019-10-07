@@ -1,13 +1,12 @@
 package com.droid.clean_architecture_android_tutorial.ui.core
 
+
 import android.app.Application
 import android.util.Log
+import com.droid.clean_architecture_android_tutorial.di.components.AppComponent
 import com.droid.clean_architecture_android_tutorial.di.components.DaggerAppComponent
 import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
 import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
-
-import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
-import javax.inject.Inject
 
 class BaseApplication : Application() {
 
@@ -15,22 +14,25 @@ class BaseApplication : Application() {
      * Field Injection or Member Injection
      */
     //    @JvmField
-    @Inject
-    public lateinit var requestApi: RequestApi
+//    @Inject
+//    public lateinit var requestApi: RequestApi
+
+
+    lateinit var applicationComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
 
-        val appComponent = DaggerAppComponent.create()
-        appComponent.inject(this)
+//        val appComponent = DaggerAppComponent.create()
+//        appComponent.inject(this)
+//
 
-
-        val applicationComponent = DaggerAppComponent.builder()
+        applicationComponent = DaggerAppComponent.builder()
             .networkModule(NetworkModule())
             .applicationModule(ApplicationModule(this))
             .build()
 
-        applicationComponent.inject(this)
+//        applicationComponent.inject(this)
 
 
 //        val networkComponent = DaggerNetworkComponent.create()
@@ -40,6 +42,12 @@ class BaseApplication : Application() {
 
 
     }
+
+/*
+    fun getApplicationComponent(): AppComponent {
+        return applicationComponent
+
+    }*/
 
 
 }
