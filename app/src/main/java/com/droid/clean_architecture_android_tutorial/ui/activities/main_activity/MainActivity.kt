@@ -28,7 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreateViews() {
 
-        if (this::requestApi.isInitialized)
+        if (this::requestApi.isInitialized && null != requestApi)
             requestApi.getPosts()
 
 

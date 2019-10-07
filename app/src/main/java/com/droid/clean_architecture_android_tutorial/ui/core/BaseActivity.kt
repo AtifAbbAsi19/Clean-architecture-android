@@ -6,11 +6,20 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
+import javax.inject.Inject
 
 abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 
     protected lateinit var mViewDataBinding: ViewDataBinding
+
+/*
+
+    @Inject
+   protected lateinit var requestApi: RequestApi
+
+*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

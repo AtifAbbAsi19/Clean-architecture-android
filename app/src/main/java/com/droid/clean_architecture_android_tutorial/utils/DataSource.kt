@@ -6,6 +6,10 @@ class DataSource {
      * https://www.coderefer.com/rxandroid-example-tutorial/
      *
      *
+     *
+     *
+     *   https://guides.codepath.com/android/Dependency-Injection-with-Dagger-2
+     *
      * https://www.journaldev.com/20405/android-dagger-2-retrofit-recyclerview
      *
      * https://www.vogella.com/tutorials/Dagger/article.html

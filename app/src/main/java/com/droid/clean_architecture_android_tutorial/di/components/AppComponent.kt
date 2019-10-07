@@ -7,7 +7,7 @@ import dagger.Component
 
 
 @Component(modules = arrayOf(NetworkModule::class))
-interface NetworkComponent {
+interface AppComponent {
 
 //    fun getRequestApi(): RequestApi
 
