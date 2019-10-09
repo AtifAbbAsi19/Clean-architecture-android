@@ -8,10 +8,7 @@ import javax.inject.Inject
  * @author Muhammad Atif
  * @Github AtifAbbAsi19
  */
-class MainActivityViewModel( repository: RequestApi) : ViewModel() {
-
-//    @Inject
-   public var requestApi: RequestApi = repository
+class MainActivityViewModel() : ViewModel() {
 
 
 }

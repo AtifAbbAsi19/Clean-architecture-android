@@ -16,6 +16,11 @@ import javax.inject.Singleton
  * @Github AtifAbbAsi19
  */
 @Singleton
+
+/**
+ * @key creators
+ * @provider value
+ */
 class ViewModelFactory
 @Inject constructor(
     private val creators: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>

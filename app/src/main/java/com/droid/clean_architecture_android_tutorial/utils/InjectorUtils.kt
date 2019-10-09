@@ -11,7 +11,7 @@ import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity
  */
 class InjectorUtils {
 
-
+/*
     fun provideLoginModelFactory(context: Context): MainActivityViewModelFactory {
         val repository = getAuthRepository(context)
         return MainActivityViewModelFactory(repository)
@@ -20,6 +20,21 @@ class InjectorUtils {
 
     private fun getAuthRepository(context: Context): RequestApi {
         return NetworkService().getRequestApi()
-    }
+
+
+   class MainActivityViewModel( repository: RequestApi) : ViewModel() {
+
+//    @Inject
+   public var requestApi: RequestApi = repository
+
+
+}
+
+class MainActivityViewModelFactory(var repo: RequestApi) {
+
+}
+
+
+    }*/
 
 }

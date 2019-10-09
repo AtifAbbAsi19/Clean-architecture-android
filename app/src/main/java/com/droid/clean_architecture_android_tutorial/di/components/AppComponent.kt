@@ -5,6 +5,7 @@ import androidx.databinding.ViewDataBinding
 import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
 import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
 import com.droid.clean_architecture_android_tutorial.di.modules.StorageModule
+import com.droid.clean_architecture_android_tutorial.di.modules.ViewModelModule
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivity
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseActivity
@@ -18,7 +19,14 @@ import javax.inject.Singleton
  */
 
 @Singleton
-@Component(modules = arrayOf(NetworkModule::class, ApplicationModule::class, StorageModule::class))
+@Component(
+    modules = arrayOf(
+        NetworkModule::class,
+        ApplicationModule::class,
+//        StorageModule::class,
+        ViewModelModule::class
+    )
+)
 interface AppComponent {
 
     /**
