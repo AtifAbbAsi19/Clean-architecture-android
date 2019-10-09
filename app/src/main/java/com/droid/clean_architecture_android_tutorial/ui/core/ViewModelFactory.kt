@@ -77,6 +77,11 @@ class ViewModelFactory
 
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        /**
+         * expects an instance of the ViewModel (modelClass)
+         * This method takes the type of the ViewModel that was requested from an Activity or Fragment as a parameter
+         */
+
         var creator = creators.get(modelClass)
         if (creator == null) {
             for (entry in creators.entries) {

@@ -15,7 +15,7 @@ import com.droid.clean_architecture_android_tutorial.di.annotations.ViewModelKey
  * @author Muhammad Atif
  * @Github AtifAbbAsi19
  */
-//@Singleton error
+//@Singleton throws error
 @Module
 abstract class ViewModelModule {
 

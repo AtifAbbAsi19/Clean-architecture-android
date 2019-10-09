@@ -15,10 +15,15 @@ import javax.inject.Inject
  * @Github AtifAbbAsi19
  */
 
-abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
+    //Base class extends databinding BaseActivity<T : ViewDataBinding>
+//abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 
     protected lateinit var mActivityViewDataBinding: ViewDataBinding
+
+    @Inject
+    lateinit var requestApi: RequestApi
 
 /*
 
@@ -31,6 +36,9 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         onCreateViews(savedInstanceState)
         setContentView(setLayout())
+
+        (application as BaseApplication).appComponent.inject(this)
+
 
         mActivityViewDataBinding = DataBindingUtil.setContentView(this, setLayout())
 
@@ -91,6 +99,7 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 
     /**
+     * @Any
      * @throws Exception
      *
      */
@@ -101,8 +110,6 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         context.startActivity(intent)
 
     }
-
-
 
 
 }

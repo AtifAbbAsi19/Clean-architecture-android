@@ -20,7 +20,9 @@ import kotlinx.android.synthetic.main.activity_splash_screen.view.*
  * @author Muhammad Atif
  * @Github AtifAbbAsi19
  */
-class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
+class SplashScreen : BaseActivity() {
+    //base class extends databinding BaseActiivty<T:ViewDataBinding>
+//class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
 
 
     val TAG = this.javaClass.simpleName
@@ -101,7 +103,7 @@ class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
 
             override fun onNext(t: Int) {
                 Log.d(TAG, "onNext : ".plus(t))
-                Toast.makeText(this@SplashScreen, "onNext : ".plus(t), Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@SplashScreen, "onNext : ".plus(t), Toast.LENGTH_SHORT).show()
             }
 
             override fun onError(e: Throwable) {

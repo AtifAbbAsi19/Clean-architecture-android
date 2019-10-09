@@ -50,7 +50,9 @@ interface AppComponent {
 
     fun inject(baseApplication: BaseApplication)
 
-    fun inject(mainActivity: MainActivity)
+//    fun inject(mainActivity: MainActivity)
+
+    fun inject(baseActivity: BaseActivity)
 
 
 }
