@@ -16,6 +16,10 @@ import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_splash_screen.view.*
 
 
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
 
 

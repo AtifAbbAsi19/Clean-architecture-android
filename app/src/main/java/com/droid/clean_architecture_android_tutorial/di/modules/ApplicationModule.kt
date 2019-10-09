@@ -9,6 +9,11 @@ import javax.inject.Singleton
  * @Modules add object to Dependency Graphs over provides method
  */
 
+
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 @Module
 class ApplicationModule(mApplication: Application) {
 

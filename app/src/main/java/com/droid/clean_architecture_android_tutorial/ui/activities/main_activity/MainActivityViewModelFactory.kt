@@ -2,6 +2,10 @@ package com.droid.clean_architecture_android_tutorial.ui.activities.main_activit
 
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 class MainActivityViewModelFactory(var repo: RequestApi) {
 
 }

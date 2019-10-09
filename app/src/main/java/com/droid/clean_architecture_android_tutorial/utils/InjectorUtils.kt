@@ -5,6 +5,10 @@ import com.droid.clean_architecture_android_tutorial.network.retrofit.NetworkSer
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivityViewModelFactory
 
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 class InjectorUtils {
 
 

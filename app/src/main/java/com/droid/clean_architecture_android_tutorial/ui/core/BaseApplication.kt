@@ -8,6 +8,11 @@ import com.droid.clean_architecture_android_tutorial.di.components.DaggerAppComp
 import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
 import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
 
+
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 class BaseApplication : Application() {
 
     /**

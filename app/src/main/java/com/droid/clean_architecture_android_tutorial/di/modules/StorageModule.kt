@@ -7,7 +7,10 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 @Module
 class StorageModule {
 

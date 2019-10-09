@@ -9,6 +9,12 @@ import androidx.databinding.ViewDataBinding
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import javax.inject.Inject
 
+
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
+
 abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 

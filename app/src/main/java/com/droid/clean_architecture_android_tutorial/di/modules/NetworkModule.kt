@@ -13,7 +13,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
 @Module
 public class NetworkModule {
 

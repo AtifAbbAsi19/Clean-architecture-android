@@ -18,6 +18,11 @@ import io.reactivex.functions.Function
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
+/**
+ * @author Muhammad Atif
+ * @Github AtifAbbAsi19
+ */
+
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
 
