@@ -12,7 +12,7 @@ import javax.inject.Inject
 abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 
-    protected lateinit var mViewDataBinding: ViewDataBinding
+    protected lateinit var mActivityViewDataBinding: ViewDataBinding
 
 /*
 
@@ -26,7 +26,7 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         onCreateViews(savedInstanceState)
         setContentView(setLayout())
 
-        mViewDataBinding = DataBindingUtil.setContentView(this, setLayout())
+        mActivityViewDataBinding = DataBindingUtil.setContentView(this, setLayout())
 
 
     }

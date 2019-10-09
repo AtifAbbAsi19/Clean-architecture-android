@@ -1,16 +1,19 @@
 package com.droid.clean_architecture_android_tutorial.di.components
 
 import android.app.Application
+import androidx.databinding.ViewDataBinding
 import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
 import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
+import com.droid.clean_architecture_android_tutorial.di.modules.StorageModule
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivity
+import com.droid.clean_architecture_android_tutorial.ui.core.BaseActivity
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseApplication
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(NetworkModule::class, ApplicationModule::class))
+@Component(modules = arrayOf(NetworkModule::class, ApplicationModule::class, StorageModule::class))
 interface AppComponent {
 
     //    fun getRequestApi(): RequestApi
@@ -18,5 +21,6 @@ interface AppComponent {
 
     fun inject(baseApplication: BaseApplication)
     fun inject(mainActivity: MainActivity)
+//    fun inject(base: BaseActivity<*>)
 
 }

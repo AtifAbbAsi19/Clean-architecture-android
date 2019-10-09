@@ -12,42 +12,34 @@ class BaseApplication : Application() {
 
     /**
      * Field Injection or Member Injection
+     * @JvmField
+     * @Inject
      */
-    //    @JvmField
-//    @Inject
-//    public lateinit var requestApi: RequestApi
 
 
-    lateinit var applicationComponent: AppComponent
+    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
 
-//        val appComponent = DaggerAppComponent.create()
-//        appComponent.inject(this)
-//
+/*     val appComponent = DaggerAppComponent.create() if no value for constructor
+ */
 
-        applicationComponent = DaggerAppComponent.builder()
+        appComponent = DaggerAppComponent.builder()
             .networkModule(NetworkModule())
             .applicationModule(ApplicationModule(this))
             .build()
 
-//        applicationComponent.inject(this)
-
-
-//        val networkComponent = DaggerNetworkComponent.create()
-//        networkComponent.inject(this)
 
         Log.d("NetworkModule", "AppClass : networkComponent")
 
 
     }
 
-/*
+
     fun getApplicationComponent(): AppComponent {
-        return applicationComponent
+        return appComponent
 
-    }*/
-
+    }
 
 }

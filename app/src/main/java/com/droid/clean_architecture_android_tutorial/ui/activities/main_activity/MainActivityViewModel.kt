@@ -5,7 +5,7 @@ import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import javax.inject.Inject
 
 
-class MainActivityViewModel(repository: RequestApi) : ViewModel() {
+class MainActivityViewModel( repository: RequestApi) : ViewModel() {
 
 //    @Inject
    public var requestApi: RequestApi = repository

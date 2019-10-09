@@ -50,8 +50,8 @@ class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
     //    code to initialize Observable
     fun initializeObservable() {
 
-        this.mViewDataBinding.let { it.root.progressBar.visibility = View.VISIBLE }
-        this.mViewDataBinding.let { it.root.tvLoadingLabel.visibility = View.VISIBLE }
+        this.mActivityViewDataBinding.let { it.root.progressBar.visibility = View.VISIBLE }
+        this.mActivityViewDataBinding.let { it.root.tvLoadingLabel.visibility = View.VISIBLE }
 
         mObservable = Observable.create {
 
@@ -80,8 +80,8 @@ class SplashScreen : BaseActivity<ActivitySplashScreenBinding>() {
         mObserver = object : Observer<Int> {
             override fun onComplete() {
 
-                mViewDataBinding.root.progressBar.visibility = View.INVISIBLE
-                mViewDataBinding.root.tvLoadingLabel.visibility = View.INVISIBLE
+                mActivityViewDataBinding.root.progressBar.visibility = View.INVISIBLE
+                mActivityViewDataBinding.root.tvLoadingLabel.visibility = View.INVISIBLE
 
 
                 Toast.makeText(this@SplashScreen, "onComplete : ", Toast.LENGTH_SHORT).show()

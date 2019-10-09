@@ -38,7 +38,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreateViews() {
 
 
-        (application as BaseApplication).applicationComponent.inject(this)
+        (application as BaseApplication).appComponent.inject(this)
 
 
         if (this::requestApi.isInitialized && null != requestApi) {
