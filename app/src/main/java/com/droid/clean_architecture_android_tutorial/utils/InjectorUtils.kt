@@ -3,7 +3,7 @@ package com.droid.clean_architecture_android_tutorial.utils
 import android.content.Context
 import com.droid.clean_architecture_android_tutorial.network.retrofit.NetworkService
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
-import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivityViewModelFactory
+//import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivityViewModelFactory
 
 /**
  * @author Muhammad Atif

@@ -2,14 +2,12 @@ package com.droid.clean_architecture_android_tutorial.di.components
 
 import android.app.Application
 import androidx.databinding.ViewDataBinding
-import com.droid.clean_architecture_android_tutorial.di.modules.ApplicationModule
-import com.droid.clean_architecture_android_tutorial.di.modules.NetworkModule
-import com.droid.clean_architecture_android_tutorial.di.modules.StorageModule
-import com.droid.clean_architecture_android_tutorial.di.modules.ViewModelModule
+import com.droid.clean_architecture_android_tutorial.di.modules.*
 import com.droid.clean_architecture_android_tutorial.network.retrofit.RequestApi
 import com.droid.clean_architecture_android_tutorial.ui.activities.main_activity.MainActivity
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseActivity
 import com.droid.clean_architecture_android_tutorial.ui.core.BaseApplication
+import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
@@ -30,6 +28,9 @@ import javax.inject.Singleton
 interface AppComponent {
 
     /**
+     * @Component Components define from which modules (or other components) dependencies are provided
+     *
+     *
      * @Basic_Url
      * https://code.tutsplus.com/tutorials/dependency-injection-with-dagger-2-on-android--cms-23345
      *
@@ -55,4 +56,13 @@ interface AppComponent {
     fun inject(baseActivity: BaseActivity)
 
 
+    /* @Component.Builder
+     interface Builder{
+         @BindsInstance
+         Builder horsePower(int horsePower);
+
+         carComponent Build();
+
+     }
+ */
 }

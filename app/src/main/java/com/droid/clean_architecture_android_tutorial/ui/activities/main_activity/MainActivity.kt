@@ -3,6 +3,8 @@ package com.droid.clean_architecture_android_tutorial.ui.activities.main_activit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.droid.clean_architecture_android_tutorial.R
@@ -23,6 +25,7 @@ import io.reactivex.functions.Function
 import io.reactivex.schedulers.Schedulers
 import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 /**
  * @author Muhammad Atif
@@ -44,6 +47,10 @@ class MainActivity : BaseActivity() {
 //    @Inject
 //    lateinit var requestApi: RequestApi
 
+    private lateinit var mainActivityViewModel: MainActivityViewModel
+
+    @Inject
+    private lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreateViews(savedInstanceState: Bundle?) {
         //no implementation Required
@@ -59,6 +66,10 @@ class MainActivity : BaseActivity() {
 
 
         recyclerView = findViewById(R.id.recycler_view)
+
+
+        mainActivityViewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(MainActivityViewModel::class.java)
 
         initRecyclerView()
 
@@ -92,6 +103,17 @@ class MainActivity : BaseActivity() {
 
     }
 
+    /*  private fun subscribeUi() {
+
+          val postListResponse = Observer<ArrayList<Post>> { posts ->
+
+          }
+
+
+          mainActivityViewModel.getPostList().observe(this, postListResponse)
+
+
+      }*/
 
     private fun getPostsObservable(): Observable<Post> {
         return requestApi

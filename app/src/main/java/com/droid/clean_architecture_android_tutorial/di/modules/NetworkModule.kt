@@ -52,10 +52,9 @@ public class NetworkModule {
     @Provides
     fun getGson(): Gson {
 
-        val gson = GsonBuilder()
+        return GsonBuilder()
             .setLenient()
             .create()
-        return gson
 
     }
 

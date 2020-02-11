@@ -17,6 +17,7 @@ import javax.inject.Inject
 
 abstract class BaseActivity : AppCompatActivity() {
     //Base class extends databinding BaseActivity<T : ViewDataBinding>
+    //https://www.journaldev.com/1663/java-generics-example-method-class-interface
 //abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
 
 
