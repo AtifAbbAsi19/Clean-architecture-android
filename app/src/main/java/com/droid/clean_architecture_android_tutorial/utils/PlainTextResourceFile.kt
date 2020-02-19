@@ -46,5 +46,30 @@
 
 // https://github.com/android/architecture-components-samples/tree/e33782ba54ebe87f7e21e03542230695bc893818/GithubBrowserSample/app/src/main/java/com/android/example/github/viewmodel
 
+//https://stackoverflow.com/questions/29929963/is-there-a-way-to-show-a-preview-of-a-recyclerviews-contents-in-the-android-stu
+
+//https://androidwave.com/recyclerview-kotlin-tutorial/
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/billTypeRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:overScrollMode="never"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        tools:itemCount="10"
+        android:layout_marginBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectBillTypeTv"
+        tools:listitem="@layout/bill_type_item_view"
+        tools:spanCount="3" />
 
 // }
