@@ -49,6 +49,11 @@ class MainActivityViewModel @Inject constructor(var requestApi: RequestApi) : Vi
 
 
     private fun getComments(): Unit {
+        
+        // return Observable.just(item)
+
+//                .doOnError {
+
 
         getPostsObservable().subscribeOn(Schedulers.io())
             .flatMap { post -> getCommentsObservable(post) }
